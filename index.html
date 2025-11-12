@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #2c3e50;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #1e293b;
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            color: #0f172a;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1d4ed8;
+        }
+
+        p {
+            margin-bottom: 20px;
+            color: #475569;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1e40af;
+        }
+
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+            letter-spacing: 1px;
+        }
+        
+        .logo a:hover {
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 25px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: #334155;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1d4ed8;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f8fafc 100%);
+            text-align: center;
+            padding: 120px 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 8px;
+        }
+        
+        .btn-primary {
+            background-color: #1d4ed8;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #1e3a8a;
+            border: 1.5px solid #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+        }
+
+        #contact {
+            text-align: center;
+        }
+        
+        .contact-links {
+            margin-top: 25px;
+        }
+
+        footer {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.95rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header .container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav li {
+                margin: 5px 12px;
+            }
+        }
+
+        /* STUDIES CARD STYLES */
+        .study-card {
+            background-color: #ffffff;
+            border-left: 4px solid #2563eb;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+        }
+
+        .study-card h3 {
+            margin-bottom: 8px;
+            color: #1d4ed8;
+        }
+
+        .study-card p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="#home">DINU JOSEPH</a></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="width: 180px; height: 180px; border-radius: 100%; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.15); border: 4px solid #1d4ed8; margin-bottom: 25px;">
+                    <img src="profile.png" alt="Augustin" style="width: 95%; height:105%; object-fit: cover;">
+                </div>
+                
+                <h1>HEY, I AM DINU JOSEPH.</h1>
+                <h2 style="font-size: 1.3rem; font-weight: 400; color: #475569; max-width: 650px; margin: 0 auto 35px auto; line-height: 1.7;">
+                    I'm <strong>Dinu joseph</strong> passionate about connecting people with  the computer world and a Jr coder with basic coding skills.
+                </h2>
+                
+                <div>
+                    <a href="#work" class="btn btn-primary">See My Roles</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="Education">
+            <div class="container">
+                <h2>Education</h2>
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 40px auto; color: #475569;">
+                    My academic journey reflects my curiosity and continuous growth through each stage of education.
+                </p>
+
+                <div class="study-card">
+                    <h3>Currently Pursuing</h3>
+                    <p><strong>Course:</strong> Bachelor of Computer Science</p>
+                    <p><strong>Institution:</strong> Government College Of Arts, Commerce and Science, Sanquelim Goa</p>
+                    <p><strong>Year:</strong> 2023 – Present</p>
+                </div>
+
+                <div class="study-card">
+                    <h3>Higher Secondary Education (12th Grade)</h3>
+                    <p><strong>Board:</strong> State Board</p>
+                    <p><strong>School:</strong> Bhumika Higher Secondary School, Parye Sanquelim Goa</p>
+                    <p><strong>Year of Completion:</strong> 2023</p>
+                    <p><strong>Stream:</strong> Science</p>
+                </div>
+
+                <div class="study-card">
+                    <h3>Secondary Education (10th Grade)</h3>
+                    <p><strong>Board:</strong> State Board</p>
+                    <p><strong>School:</strong> St John of the Cross High School, Sanquelim Goa</p>
+                    <p><strong>Year of Completion:</strong> 2021</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>Hello and welcome! I'm <strong>Dinu Joseph</strong> from Sanquelim, North Goa.</p>
+                <p>I am a <strong>B.Sc. Computer Science</strong> student at <strong>Government College, Sanquelim</strong>, currently in my third year. I have a strong interest in computers, especially in <strong>web development, programming, and artificial intelligence</strong>.</p>
+                <p>I enjoy creating simple and responsive websites using <strong>HTML, CSS, and JavaScript</strong>. I also like working with AI tools such as <strong>ChatGPT, Perplexity, Gemini, Canva AI, Leonardo AI, and Pika Labs</strong> for content creation, video making, and design ideas.</p>
+                <p>I have basic coding knowledge in <strong>C, C++, and Python</strong> and have also used <strong>Android Studio</strong> for mobile app development. I am always learning new tools and technologies to improve my skills and stay updated with the latest trends in tech.</p>
+                <p>I’m passionate about using technology to create useful and creative digital projects that make work easier and more interesting.</p>
+            </div>
+        </section>
+
+        <section id="work">
+            <div class="container">
+                <h2>My Work and Roles</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Artificial Inteligence</h3>
+                        <p>I use AI tools to enhance my studies, projects, and daily tasks. Tools like ChatGPT, Gemini, and Copilot help me code, learn, and solve complex problems efficiently. Grammarly and Canva AI assist in creating clear and creative work, while Notion AI helps me stay organized. AI supports my productivity, creativity, and learning across multiple areas.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Creative Technologist</h3>
+                        <p>I design responsive websites using HTML, CSS, and JavaScript, focusing on user-friendly and modern designs. I manage projects on GitHub, deploy sites via GitHub Pages, and create engaging visuals through AI-based photo editing and video production. My work blends technology and creativity to deliver complete and appealing digital solutions.</p>
+                    </div>
+ <div class="card">
+                        <h3>Jr.Software developer(student)</h3>
+                        <p>As a 3rd-year B.Sc. Computer Science student, I have basic skills in software development, C/C++, and database management using MySQL and XAMPP. I’ve also built Android apps and explored operating systems, data structures, and software engineering. I aim to develop real-world software solutions and continually grow my technical expertise.</p>
+                    </div>
+ <div class="card">
+                        <h3>Data and Technology Enthusiast</h3>
+                        <p>I have a keen interest in data analysis, computing systems, and emerging technologies. I work with tools like Excel, Google Sheets, and AI assistants to collect, organize, and interpret data effectively. My coursework has strengthened my understanding of databases, operating systems, and computer networks. I enjoy exploring how technology and data combine to solve real-world problems, improve decision-making, and drive innovation in the digital world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <p>Applying  freshy or Online Work from home!!</p>
+                <div class="contact-links">
+                    <a href="mailto:augsutined128@gmail.com" class="btn btn-primary">Email Me</a>
+                    <a href="https://www.instagram.com/augustine_dinu/?__pwa=1#" class="btn btn-secondary" target="_blank">Instagram</a>
+ <a href="https://www.facebook.com/share/14MYeYtb1Lz/" class="btn btn-secondary" target="_blank">Facebook</a>
+<a href="tel:+917249169943" class="btn btn-secondary">Phone</a>
+
+                </div>
+            </div>
+<h3>Contact Number:+917249169943</h3>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Bringing ideas to life — Dinu © 2025.</p>
+        </div>
+    </footer>
+</body>
+</html>
